@@ -1,0 +1,16 @@
+<div class="egreso">
+    <h2 class="egreso_titulo">Egresos</h2>          
+        
+        <div *ngFor="let movement of expenses" class="elemento limpiarEstilos animate__animated animate__pulse" >
+                <div class="elemento_descripcion"> {{movement.title}} </div>
+                <div class="right limpiarEstilos">
+                    <div class="elemento_valor">- {{movement.total}} </div>
+                    <div class="elemento_porcentaje">21%</div>
+                    <div class="elemento_eliminar">
+                        <button class="elemento_eliminar--btn" (click)="eliminar(movement)"><i class="ion-ios-close-outline"></i></button>
+                    </div>
+                </div>
+        </div>
+        
+        
+</div>

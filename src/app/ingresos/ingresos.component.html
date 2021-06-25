@@ -1,0 +1,17 @@
+<div class="ingreso">
+    <h2 class="ingreso_titulo">Ingresos</h2>
+       
+        <div *ngFor="let movement of incomes" class="elemento limpiarEstilos animate__animated animate__pulse">
+            <div *ngIf="movement.type == 'ing'">
+                <div class="elemento_descripcion"> {{movement.title}} </div>
+                <div class="right limpiarEstilos">
+                    <div class="elemento_valor">+ {{movement.total}} USD</div>
+                    <div class="elemento_eliminar">
+                        <button class="elemento_eliminar--btn">
+                            <i class="ion-ios-close-outline" (click)="eliminar(movement)"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>  
